@@ -1,4 +1,8 @@
 package nju.ics.lixiaofan.algorithm;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /*
 Given an array of citations (each citation is a non-negative integer) of a researcher, write a function to compute the researcher's h-index.
 
@@ -10,9 +14,31 @@ Note: If there are several possible values for h, the maximum one is taken as th
  */
 public class HIndex {
 	public static void main(String[] args) {
-
+		HIndex hi = new HIndex();
+		int[] citations = {4, 0, 6, 4, 5};
+		System.out.println(hi.hIndex(citations));
 	}
     public int hIndex(int[] citations) {
-		return 0;
+    	if(citations.length == 0)
+    		return 0;
+    	int h = 0, n = 0;
+    	Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+    	for(int c : citations){
+    		if(c > h){
+    			if(map.containsKey(c))
+    				map.put(c, map.get(c)+1);
+    			else
+    				map.put(c, 1);
+    			
+    			n++;
+    			if(n == h+1){
+    				h++;
+    				if(map.containsKey(h))
+    					n -= map.get(h);
+    			}
+    		}
+    	}
+    	
+    	return h;
     }
 }
