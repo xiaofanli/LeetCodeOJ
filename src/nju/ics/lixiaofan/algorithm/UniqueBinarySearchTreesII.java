@@ -1,10 +1,7 @@
 package nju.ics.lixiaofan.algorithm;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
-import java.util.Stack;
 
 /*
 Given n, generate all structurally unique BST's (binary search trees) that store values 1...n.
@@ -66,7 +63,7 @@ public class UniqueBinarySearchTreesII {
         return roots;
     }
 
-	public class TreeNode {
+	private static class TreeNode {
 		int val;
 		TreeNode left;
 		TreeNode right;

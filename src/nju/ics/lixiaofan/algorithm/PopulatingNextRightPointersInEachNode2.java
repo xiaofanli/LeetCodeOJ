@@ -1,6 +1,5 @@
 package nju.ics.lixiaofan.algorithm;
 
-import nju.ics.lixiaofan.algorithm.PopulatingNextRightPointersInEachNode.TreeLinkNode;
 
 /*
 	Follow up for problem "Populating Next Right Pointers in Each Node".
@@ -47,7 +46,7 @@ public class PopulatingNextRightPointersInEachNode2 {
 	    }
 	    return null;
 	}
-	class TreeLinkNode {
+	private static class TreeLinkNode {
 		int val;
 		TreeLinkNode left, right, next;
 

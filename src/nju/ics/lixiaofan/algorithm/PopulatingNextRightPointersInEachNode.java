@@ -66,7 +66,7 @@ public class PopulatingNextRightPointersInEachNode {
         }
     }
 
-	class TreeLinkNode {
+    private static class TreeLinkNode {
 		int val;
 		TreeLinkNode left, right, next;
 

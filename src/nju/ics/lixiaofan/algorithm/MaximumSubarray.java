@@ -1,8 +1,5 @@
 package nju.ics.lixiaofan.algorithm;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /*
  * 
  * Find the contiguous subarray within an array (containing at least one number) which has the largest sum.

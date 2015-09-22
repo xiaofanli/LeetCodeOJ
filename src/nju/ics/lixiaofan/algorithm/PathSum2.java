@@ -28,7 +28,7 @@ public class PathSum2 {
 		// TODO Auto-generated method stub
 	}
 	
-	class TreeNode {
+	private static class TreeNode {
 		int val;
 		TreeNode left;
 		TreeNode right;

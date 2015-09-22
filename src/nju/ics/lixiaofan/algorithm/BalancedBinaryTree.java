@@ -84,7 +84,7 @@ public class BalancedBinaryTree {
     	return Math.max(left, right)+1;
     }
     
-	public static class TreeNode {
+	private static class TreeNode {
 		int val;
 		TreeNode left;
 		TreeNode right;

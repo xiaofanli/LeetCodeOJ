@@ -27,7 +27,7 @@ public class MaximumDepthOfBinaryTree {
     		traverse(root.right, d+1);
     }
     
-	public static class TreeNode {
+    private static class TreeNode {
 		int val;
 		TreeNode left;
 		TreeNode right;
