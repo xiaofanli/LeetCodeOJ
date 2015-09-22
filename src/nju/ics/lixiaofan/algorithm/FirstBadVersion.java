@@ -29,7 +29,7 @@ public class FirstBadVersion {
         	else{
         		l = mid + 1;
         	}
-        	System.out.println("["+l+", "+r+"]");
+        	// System.out.println("["+l+", "+r+"]");
         }
         return ver;
     }
