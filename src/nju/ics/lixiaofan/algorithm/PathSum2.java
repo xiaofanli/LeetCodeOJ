@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
 
+import nju.ics.lixiaofan.structure.TreeNode;
+
 /*
 	Given a binary tree and a sum, find all root-to-leaf paths where each path's sum equals the given sum.
 	
@@ -24,27 +26,6 @@ import java.util.Stack;
 */
 
 public class PathSum2 {
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	}
-	
-	private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-		TreeNode(int x) {
-			val = x;
-		}
-	}
-
-	class Node {
-		TreeNode node;
-		boolean visited = false;
-		public Node(TreeNode tr) {
-			node = tr;
-		}
-	}
-		
 	public List<List<Integer>> pathSum(TreeNode root, int sum) {
 		List<List<Integer>> paths = new LinkedList<List<Integer>>();
 		if(root == null)
@@ -86,4 +67,11 @@ public class PathSum2 {
 		return paths;
     }
 	
+	class Node {
+		TreeNode node;
+		boolean visited = false;
+		public Node(TreeNode tr) {
+			node = tr;
+		}
+	}
 }

@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import nju.ics.lixiaofan.structure.TreeNode;
+
 /*
 Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
 
@@ -22,9 +24,6 @@ return its level order traversal as:
 ]
  */
 public class BinaryTreeLevelOrderTraversal {
-	public static void main(String[] args) {
-	}
-	
 	//bfs
 	public List<List<Integer>> levelOrder(TreeNode root) {
 		List<List<Integer>> result = new LinkedList<List<Integer>>();
@@ -53,14 +52,4 @@ public class BinaryTreeLevelOrderTraversal {
 		}
 		return result;
     }
-	
-	private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
 }

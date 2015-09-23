@@ -4,6 +4,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
 
+import nju.ics.lixiaofan.structure.TreeNode;
+
 /*
 Given a binary tree containing digits from 0-9 only, each root-to-leaf path could represent a number.
 
@@ -22,9 +24,6 @@ The root-to-leaf path 1->3 represents the number 13.
 Return the sum = 12 + 13 = 25.
  */
 public class SumRootToLeafNumbers {
-	public static void main(String[] args) {
-
-	}
     public int sumNumbers(TreeNode root) {
         if(root == null)
         	return 0;
@@ -53,14 +52,4 @@ public class SumRootToLeafNumbers {
         
         return sum;
     }
-    
-    private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
 }

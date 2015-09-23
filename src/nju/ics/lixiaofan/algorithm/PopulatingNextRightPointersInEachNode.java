@@ -3,6 +3,8 @@ package nju.ics.lixiaofan.algorithm;
 import java.util.LinkedList;
 import java.util.List;
 
+import nju.ics.lixiaofan.structure.TreeLinkNode;
+
 /*
 	Given a binary tree
 
@@ -65,13 +67,4 @@ public class PopulatingNextRightPointersInEachNode {
         	}
         }
     }
-
-    private static class TreeLinkNode {
-		int val;
-		TreeLinkNode left, right, next;
-
-		TreeLinkNode(int x) {
-			val = x;
-		}
-	}
 }

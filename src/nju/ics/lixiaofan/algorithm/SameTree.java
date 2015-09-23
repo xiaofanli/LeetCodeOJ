@@ -3,6 +3,8 @@ package nju.ics.lixiaofan.algorithm;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import nju.ics.lixiaofan.structure.TreeNode;
+
 /*
 Given two binary trees, write a function to check if they are equal or not.
 
@@ -50,14 +52,4 @@ public class SameTree {
         }
         return q1.isEmpty() && q2.isEmpty();
     }
-    
-	private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
 }

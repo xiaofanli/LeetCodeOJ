@@ -1,15 +1,13 @@
 package nju.ics.lixiaofan.algorithm;
 
+import nju.ics.lixiaofan.structure.TreeNode;
+
 /*
 Given a binary tree, find its maximum depth.
 
 The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
  */
 public class MaximumDepthOfBinaryTree {
-	public static void main(String[] args) {
-
-	}
-	
 	int depth = 1;
     public int maxDepth(TreeNode root) {
         if(root == null)
@@ -26,14 +24,4 @@ public class MaximumDepthOfBinaryTree {
     	if(root.right != null)
     		traverse(root.right, d+1);
     }
-    
-    private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
 }

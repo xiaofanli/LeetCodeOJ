@@ -3,6 +3,8 @@ package nju.ics.lixiaofan.algorithm;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import nju.ics.lixiaofan.structure.TreeNode;
+
 //Given preorder and inorder traversal of a tree, construct the binary tree.
 public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
 	public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
 		int[] inorder = {5,3,1,4,2};
 		TreeNode tn = cbt.buildTree(preorder, inorder);
 		
-		Queue<TreeNode> q = new LinkedList<ConstructBinaryTreeFromPreorderAndInorderTraversal.TreeNode>();
+		Queue<TreeNode> q = new LinkedList<TreeNode>();
 		q.add(tn);
 		System.out.println("root: "+tn.val);
 		while(!q.isEmpty()){
@@ -26,6 +28,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
 			}
 		}
 	}
+	
     public TreeNode buildTree(int[] preorder, int[] inorder) {
     	if(preorder.length != inorder.length)
     		return null;
@@ -49,13 +52,4 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
     		root.right = build(preorder, l1+leftSize+1, l1+leftSize+rightSize, inorder, idx+1, r2);
     	return root;
     }
-    
-    private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-		TreeNode(int x) {
-			val = x;
-		}
-	}
 }

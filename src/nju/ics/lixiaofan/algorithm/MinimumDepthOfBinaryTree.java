@@ -3,16 +3,14 @@ package nju.ics.lixiaofan.algorithm;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import nju.ics.lixiaofan.structure.TreeNode;
+
 /*
 Given a binary tree, find its minimum depth.
 
 The minimum depth is the number of nodes along the shortest path from the root node down to the nearest leaf node.
  */
 public class MinimumDepthOfBinaryTree {
-	public static void main(String[] args) {
-
-	}
-	
     public int minDepth(TreeNode root) {
         if(root == null)
         	return 0;
@@ -36,14 +34,4 @@ public class MinimumDepthOfBinaryTree {
         }
 		return -1;
     }
-    
-    private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
 }

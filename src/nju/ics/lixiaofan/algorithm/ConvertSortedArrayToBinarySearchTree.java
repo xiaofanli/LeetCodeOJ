@@ -1,11 +1,11 @@
 package nju.ics.lixiaofan.algorithm;
+
+import nju.ics.lixiaofan.structure.TreeNode;
+
 /*
 Given an array where elements are sorted in ascending order, convert it to a height balanced BST.
  */
 public class ConvertSortedArrayToBinarySearchTree {
-	public static void main(String[] args) {
-
-	}
     public TreeNode sortedArrayToBST(int[] nums) {
     	if(nums.length == 0)
     		return null;
@@ -21,14 +21,4 @@ public class ConvertSortedArrayToBinarySearchTree {
     		root.right = buildBST(nums, mid+1, r);
     	return root;
     }
-    
-    private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
 }

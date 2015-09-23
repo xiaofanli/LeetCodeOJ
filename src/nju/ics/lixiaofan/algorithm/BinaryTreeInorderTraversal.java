@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.Stack;
 
+import nju.ics.lixiaofan.structure.TreeNode;
+
 /*
 Given a binary tree, return the inorder traversal of its nodes' values.
 
@@ -21,9 +23,6 @@ return [1,3,2].
 Note: Recursive solution is trivial, could you do it iteratively?
  */
 public class BinaryTreeInorderTraversal {
-	public static void main(String[] args) {
-		
-	}
 	public List<Integer> inorderTraversal(TreeNode root) {
 		if(root == null)
 			return new LinkedList<Integer>();
@@ -47,14 +46,4 @@ public class BinaryTreeInorderTraversal {
         }
         return list;
     }
-	
-	private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
 }

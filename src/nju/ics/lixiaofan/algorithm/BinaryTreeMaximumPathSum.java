@@ -1,4 +1,7 @@
 package nju.ics.lixiaofan.algorithm;
+
+import nju.ics.lixiaofan.structure.TreeNode;
+
 /*
 Given a binary tree, find the maximum path sum.
 
@@ -13,10 +16,6 @@ Given the below binary tree,
 Return 6.
  */
 public class BinaryTreeMaximumPathSum {
-	public static void main(String[] args) {
-
-	}
-	
 	int max = Integer.MIN_VALUE;
 	public int maxPathSum(TreeNode root) {
         getMaxSum(root);
@@ -42,15 +41,4 @@ public class BinaryTreeMaximumPathSum {
 		else
 			return root.val;
 	}
-
-	private static class TreeNode {
-		int val;
-		TreeNode left;
-		TreeNode right;
-
-		TreeNode(int x) {
-			val = x;
-		}
-	}
-	 
 }
