@@ -1,5 +1,7 @@
 package nju.ics.lixiaofan.algorithm;
 
+import nju.ics.lixiaofan.structure.ListNode;
+
 /*
 Reverse a singly linked list.
  */
@@ -20,11 +22,4 @@ public class ReverseLinkedList {
     	}
     	return p;
     }
-	public static class ListNode {
-		int val;
-		ListNode next;
-		ListNode(int x) {
-			val = x;
-		}
-	}
 }

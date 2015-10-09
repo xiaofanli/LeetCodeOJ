@@ -1,5 +1,7 @@
 package nju.ics.lixiaofan.algorithm;
 
+import nju.ics.lixiaofan.structure.ListNode;
+
 public class AddTwoNumbers {
 
 	/**
@@ -78,14 +80,4 @@ public class AddTwoNumbers {
 		return head.next;
 	}
 	
-}
-
-class ListNode {
-	int val;
-	ListNode next;
-
-	ListNode(int x) {
-		val = x;
-		next = null;
-	}
 }

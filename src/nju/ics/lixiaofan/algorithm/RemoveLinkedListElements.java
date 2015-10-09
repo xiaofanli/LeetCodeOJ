@@ -1,4 +1,7 @@
 package nju.ics.lixiaofan.algorithm;
+
+import nju.ics.lixiaofan.structure.ListNode;
+
 /*
 Remove all elements from a linked list of integers that have value val.
 
@@ -46,13 +49,4 @@ public class RemoveLinkedListElements {
     	}
     	return newHead;
     }
-    
-	public static class ListNode {
-		int val;
-		ListNode next;
-
-		ListNode(int x) {
-			val = x;
-		}
-	}
 }

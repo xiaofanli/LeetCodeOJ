@@ -1,5 +1,7 @@
 package nju.ics.lixiaofan.algorithm;
 
+import nju.ics.lixiaofan.structure.ListNode;
+
 /*
 Reverse a linked list from position m to n. Do it in-place and in one-pass.
 
@@ -13,9 +15,6 @@ Given m, n satisfy the following condition:
 1 ¡Ü m ¡Ü n ¡Ü length of list.
  */
 public class ReverseLinkedListII {
-	public static void main(String[] args) {
-
-	}
     public ListNode reverseBetween(ListNode head, int m, int n) {
     	ListNode newHead = head, l = null, p = head;
     	int idx = 1;
@@ -40,11 +39,4 @@ public class ReverseLinkedListII {
     	mp.next = q;
     	return newHead;
     }
-	public static class ListNode {
-		int val;
-		ListNode next;
-		ListNode(int x) {
-			val = x;
-		}
-	}
 }

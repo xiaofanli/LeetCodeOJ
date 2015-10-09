@@ -1,5 +1,7 @@
 package nju.ics.lixiaofan.algorithm;
 
+import nju.ics.lixiaofan.structure.ListNode;
+
 /*
 Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
 
@@ -17,23 +19,6 @@ For k = 2, you should return: 2->1->4->3->5
 For k = 3, you should return: 3->2->1->4->5
  */
 public class ReverseNodesInK_Group {
-	public static void main(String[] args) {
-		ListNode p = new ListNode(1), head = p;
-		p.next = new ListNode(2);
-		p = p.next;
-		p.next = new ListNode(3);
-		p = p.next;
-		p.next = new ListNode(4);
-		p = p.next;
-		p.next = new ListNode(5);
-		p.next.next = null;
-		ReverseNodesInK_Group rn = new ReverseNodesInK_Group();
-		head = rn.reverseKGroup(head, 3);
-		while(head != null){
-			System.out.println(head.val);
-			head = head.next;
-		}
-	}
     public ListNode reverseKGroup(ListNode head, int k) {
         if(head == null || head.next == null || k < 2)
         	return head;
@@ -74,12 +59,4 @@ public class ReverseNodesInK_Group {
         }
         return newHead;
     }
-    
-	public static class ListNode {
-		int val;
-		ListNode next;
-		ListNode(int x) {
-			val = x;
-		}
-	}
 }
