@@ -33,13 +33,6 @@ Visually, the graph looks like the following:
          \_/
 */
 public class CloneGraph {
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String str = "0,1,2#1,2#2,2";
-		String[] strs = str.split("#");
-		System.out.println(strs.length);
-	}
-
 	public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
 		if(node == null)
 			return null;

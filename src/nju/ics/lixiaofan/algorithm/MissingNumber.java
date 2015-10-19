@@ -9,12 +9,6 @@ Note:
 Your algorithm should run in linear runtime complexity. Could you implement it using only constant extra space complexity?
  */
 public class MissingNumber {
-	public static void main(String[] args) {
-		MissingNumber mn = new MissingNumber();
-		int[] nums = {0, 3, 1};
-		System.out.println(mn.missingNumber(nums));
-	}
-	
 	//a^b^b = a
 	public int missingNumber(int[] nums) {
 	    int xor = 0, i = 0;

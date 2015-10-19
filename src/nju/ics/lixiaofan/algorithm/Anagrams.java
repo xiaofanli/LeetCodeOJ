@@ -11,14 +11,6 @@ import java.util.List;
  */
 
 public class Anagrams {
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String[] strs = {"cab","tin","pew","duh","may","ill","buy","bar","max","doc"};
-		List<String> list = anagrams(strs);
-		for(String str : list)
-			System.out.println(str);
-	}
-
 	public static List<String> anagrams(String[] strs) {
 		List<String> list = new LinkedList<String>();
 		Hashtable<Integer, List<String>> hashtable = new Hashtable<Integer, List<String>>();
@@ -60,22 +52,4 @@ public class Anagrams {
         hash += hash << 5;  
         return (hash & 0x7FFFFFFF);  
     }
-	
-	public static int JSHash(String key) {  
-        int hash = 1315423911;  
-        int n = key.length();  
-        for (int i = 0; i < n; i++) {  
-            hash ^= ((hash << 5) + key.charAt(i) + (hash >> 2));  
-        }  
-        return (hash & 0x7FFFFFFF);  
-    }
-	
-	 public static int DJBHash(String key) {  
-	        int hash = 5381;  
-	        int n = key.length();  
-	        for (int i = 0; i < n; i++) {  
-	            hash += (hash << 5) + key.charAt(i);  
-	        }  
-	        return (hash & 0x7FFFFFFF);  
-	    }  
 }

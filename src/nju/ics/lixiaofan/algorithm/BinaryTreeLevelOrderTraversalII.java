@@ -24,19 +24,6 @@ return its bottom-up level order traversal as:
 ]
  */
 public class BinaryTreeLevelOrderTraversalII {
-	public static void main(String[] args) {
-		BinaryTreeLevelOrderTraversalII btt2 = new BinaryTreeLevelOrderTraversalII();
-		TreeNode root = new TreeNode(3);
-		root.left = new TreeNode(9);
-		root.right = new TreeNode(20);
-		root.right.left = new TreeNode(15);
-		root.right.right = new TreeNode(7);
-		
-		List<List<Integer>> result = btt2.levelOrderBottom(root);
-		for(List<Integer> list : result)
-			System.out.println(list);
-	}
-
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
     	List<List<Integer>> result = new LinkedList<List<Integer>>();
     	if(root == null)

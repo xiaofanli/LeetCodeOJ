@@ -5,9 +5,6 @@ Note:
 Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
  */
 public class SingleNumberII {
-	public static void main(String[] args) {
-		
-	}
 	//precondition: Given an array of integers, every element appears k (k >1) times except for one, which appears p times(p>=1, p % k != 0).
 	//hint: every integer is 32 bits
     public int singleNumber(int[] nums) {

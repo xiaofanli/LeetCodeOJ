@@ -33,11 +33,6 @@ Here's an example:
 The above binary tree is serialized as "{1,2,3,#,#,4,#,#,5}".
  */
 public class UniqueBinarySearchTreesII {
-	public static void main(String[] args) {
-		UniqueBinarySearchTreesII ubst = new UniqueBinarySearchTreesII();
-		ubst.generateTrees(3);
-	}
-	
 	public List<TreeNode> generateTrees(int n) {
         return generateTrees(1, n);
     }

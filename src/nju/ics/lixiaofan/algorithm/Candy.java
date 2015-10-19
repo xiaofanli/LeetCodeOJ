@@ -9,10 +9,6 @@ Children with a higher rating get more candies than their neighbors.
 What is the minimum candies you must give?
  */
 public class Candy {
-	public static void main(String[] args) {
-		int[] ratings = {1,3,4,3,2,1};
-		System.out.println(candy(ratings));
-	}
     public static int candy(int[] ratings) {
     	if(ratings.length == 0)
     		return 0;

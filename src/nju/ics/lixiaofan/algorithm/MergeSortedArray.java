@@ -7,10 +7,6 @@ You may assume that nums1 has enough space (size that is greater or equal to m +
 The number of elements initialized in nums1 and nums2 are m and n respectively.
  */
 public class MergeSortedArray {
-	public static void main(String[] args) {
-
-	}
-	
 	//ascending
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         int i = m - 1, j = n - 1, tar = m + n - 1;

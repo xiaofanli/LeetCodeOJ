@@ -23,13 +23,9 @@ Note:
 The input prerequisites is a graph represented by a list of edges, not adjacency matrices. Read more about how a graph is represented.
  */
 public class CourseSchedule {
-	public static void main(String[] args) {
-		int[][] pre = {{1,0},{2,6},{1,7},{5,1},{6,4},{7,0},{0,5},{5,1},{6,4}};
-		CourseSchedule cs = new CourseSchedule();
-		System.out.println(cs.canFinish(2000, pre));
-	}
 	//find out whether a cycle exists using bfs(kahn)
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public boolean canFinish(int numCourses, int[][] prerequisites) {
         ArrayList[] graph = new ArrayList[numCourses];
         int[] degree = new int[numCourses];
         Queue<Integer> queue = new LinkedList<Integer>();

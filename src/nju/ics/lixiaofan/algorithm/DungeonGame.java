@@ -1,8 +1,5 @@
 package nju.ics.lixiaofan.algorithm;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 /*
  * The demons had captured the princess (P) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (K) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.
 
@@ -27,12 +24,6 @@ The knight's health has no upper bound.
 Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.
  */
 public class DungeonGame {
-	public static void main(String[] args) {
-		int[][] d = { { -2, -3, 3 }, { -5, -10, 1 }};
-		DungeonGame dg = new DungeonGame();
-		System.out.println(dg.calculateMinimumHP(d));
-	}
-	
 	int m, n;
 	int[][] minhp, dungeon;
 	public int calculateMinimumHP(int[][] dungeon) {

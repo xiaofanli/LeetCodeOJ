@@ -10,10 +10,6 @@ Note:
 The solution is guaranteed to be unique.
  */
 public class GasStation {
-	public static void main(String[] args) {
-
-	}
-	
 	public int canCompleteCircuit(int[] gas, int[] cost) {
         int[] remain = new int[gas.length];
         int totalAmount = 0;

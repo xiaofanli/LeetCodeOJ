@@ -8,11 +8,6 @@ For example, given [3, 30, 34, 5, 9], the largest formed number is 9534330.
 Note: The result may be very large, so you need to return a string instead of an integer.
  */
 public class LargestNumber {
-	public static void main(String[] args) {
-		LargestNumber ln = new LargestNumber();
-		int[] nums = {3, 30, 34, 5, 9};
-		System.out.println(ln.largestNumber(nums));
-	}
     public String largestNumber(int[] nums) {
     	if(nums.length == 0)
     		return null;

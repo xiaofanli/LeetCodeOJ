@@ -8,10 +8,6 @@ How many possible unique paths are there?
 Note: m and n will be at most 100.
  */
 public class UniquePaths {
-	public static void main(String[] args) {
-		UniquePaths up = new UniquePaths();
-		System.out.println(up.uniquePaths(100, 7));
-	}
 	//C^(m-1)_(m+n-2)
     public int uniquePaths(int m, int n) {
         if(m < 1 || n < 1)

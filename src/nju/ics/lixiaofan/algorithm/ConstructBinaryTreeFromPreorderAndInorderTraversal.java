@@ -1,34 +1,9 @@
 package nju.ics.lixiaofan.algorithm;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 import nju.ics.lixiaofan.structure.TreeNode;
 
 //Given preorder and inorder traversal of a tree, construct the binary tree.
 public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
-	public static void main(String[] args) {
-		ConstructBinaryTreeFromPreorderAndInorderTraversal cbt  = new ConstructBinaryTreeFromPreorderAndInorderTraversal();
-		int[] preorder = {1,3,5,2,4};
-		int[] inorder = {5,3,1,4,2};
-		TreeNode tn = cbt.buildTree(preorder, inorder);
-		
-		Queue<TreeNode> q = new LinkedList<TreeNode>();
-		q.add(tn);
-		System.out.println("root: "+tn.val);
-		while(!q.isEmpty()){
-			TreeNode n = q.poll();
-			if(n.left != null){
-				q.add(n.left);
-				System.out.println(n.val+" left: "+n.left.val);
-			}
-			if(n.right != null){
-				q.add(n.right);
-				System.out.println(n.val+" right: "+n.right.val);
-			}
-		}
-	}
-	
     public TreeNode buildTree(int[] preorder, int[] inorder) {
     	if(preorder.length != inorder.length)
     		return null;

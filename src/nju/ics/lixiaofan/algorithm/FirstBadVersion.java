@@ -11,11 +11,6 @@ You should minimize the number of calls to the API.
  */
 
 public class FirstBadVersion {
-	public static void main(String[] args) {
-		FirstBadVersion fbv = new FirstBadVersion();
-		System.out.println(fbv.firstBadVersion(2126753390));
-	}
-	
 	//binary search
     public int firstBadVersion(int n) {
         long l = 1, r = n;
@@ -29,7 +24,6 @@ public class FirstBadVersion {
         	else{
         		l = mid + 1;
         	}
-        	// System.out.println("["+l+", "+r+"]");
         }
         return ver;
     }

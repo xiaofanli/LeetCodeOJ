@@ -18,16 +18,6 @@ Return
   ]
  */
 public class PalindromePartitioning {
-
-	public static void main(String[] args) {
-		PalindromePartitioning pp = new PalindromePartitioning();
-		List<List<String>> ret = pp.partition("aab");
-		for(List<String> slist: ret){
-			for(String s : slist)
-				System.out.print(s+" ");
-			System.out.println();
-		}
-	}
 	public List<List<String>> partition(String s) {
 		if(s == null)
 			return null;

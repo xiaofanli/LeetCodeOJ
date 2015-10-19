@@ -6,16 +6,6 @@ import nju.ics.lixiaofan.structure.ListNode;
 Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
  */
 public class MergeTwoSortedLists {
-	public static void main(String[] args) {
-		ListNode h1 = new ListNode(3), h2 = new ListNode(2);
-		h2.next = new ListNode(4);
-		MergeTwoSortedLists a = new MergeTwoSortedLists();
-		ListNode x = a.mergeTwoLists(h1, h2);
-		while(x != null){
-			System.out.println(x.val);
-			x = x.next;
-		}
-	}
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if(l1 == null)
             return l2;

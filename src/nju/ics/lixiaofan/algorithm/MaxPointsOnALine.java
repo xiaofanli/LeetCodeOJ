@@ -4,25 +4,12 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.Stack;
 
 /*
  * Given n points on a 2D plane, find the maximum number of points that lie on the same straight line.
  */
 
 public class MaxPointsOnALine {
-
-	public static void main(String[] args) {
-		MaxPointsOnALine a = new MaxPointsOnALine();
-		Point[] p = new Point[4];
-		p[0] = new Point(3,1);
-		p[1] = new Point(12,3);
-		p[2] = new Point(3,1);
-		p[3] = new Point(-6,-1);
-		
-		a.maxPoints(p);
-	}
-
 	public int maxPoints(Point[] points) {
 		if(points.length < 3)
 			return points.length;
@@ -92,13 +79,6 @@ public class MaxPointsOnALine {
 				}
 			idx++;
 		}
-		
-//		for(Map.Entry<Co, Line> e : map.entrySet()){
-//			Co c = e.getKey();
-//			Line l = e.getValue();
-//			System.out.println(c.k + "\t" + c.b);
-//		}
-		
 		return max;
 	}
 	

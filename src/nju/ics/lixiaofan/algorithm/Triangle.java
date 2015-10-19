@@ -18,9 +18,6 @@ Note:
 Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.
  */
 public class Triangle {
-	public static void main(String[] args) {
-
-	}
     public int minimumTotal(List<List<Integer>> triangle) {
         int n = triangle.size();
         for(int i = n-2;i >= 0;i--)

@@ -7,11 +7,6 @@ Given an array of integers, find out whether there are two distinct indices i an
 the difference between nums[i] and nums[j] is at most t and the difference between i and j is at most k.
  */
 public class ContainsDuplicateIII {
-	public static void main(String[] args) {
-		int[] nums = {-1,2147483647};
-		ContainsDuplicateIII cd = new ContainsDuplicateIII();
-		System.out.println(cd.containsNearbyAlmostDuplicate(nums, 1, 2147483647));
-	}
     public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
     	if(t > k){
 	    	for(int i = 0;i < nums.length - 1;i++){

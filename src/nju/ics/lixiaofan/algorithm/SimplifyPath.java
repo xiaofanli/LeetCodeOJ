@@ -3,10 +3,6 @@ package nju.ics.lixiaofan.algorithm;
 import java.util.Stack;
 
 public class SimplifyPath {
-	public static void main(String[] args) {
-		SimplifyPath a = new SimplifyPath();
-		System.out.println(a.simplifyPath("/.."));
-	}
     public String simplifyPath(String path) {
         if(path == null)
             return null;

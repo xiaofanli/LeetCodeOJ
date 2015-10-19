@@ -1,9 +1,7 @@
 package nju.ics.lixiaofan.algorithm;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /*
 The set [1,2,3,бн,n] contains a total of n! unique permutations.
@@ -22,11 +20,6 @@ Given n and k, return the kth permutation sequence.
 Note: Given n will be between 1 and 9 inclusive.
  */
 public class PermutationSequence {
-	public static void main(String[] args) {
-		PermutationSequence ps = new PermutationSequence();
-		System.out.println(ps.getPermutation(6, 6));
-	}
-
 	public String getPermutation(int n, int k) {
 		if(k < 1)
 			return null;

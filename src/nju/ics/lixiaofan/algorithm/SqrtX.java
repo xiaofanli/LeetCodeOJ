@@ -1,10 +1,6 @@
 package nju.ics.lixiaofan.algorithm;
 //Implement int sqrt(int x). Compute and return the square root of x.
 public class SqrtX {
-	public static void main(String[] args) {
-		SqrtX sqrtx = new SqrtX();
-		System.out.println(sqrtx.mySqrt(2147483647));
-	}
 	int x, sqrtx;
     public int mySqrt(int x) {
     	if(x < 2)

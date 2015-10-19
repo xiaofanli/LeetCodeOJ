@@ -12,9 +12,6 @@ Hint:
 Could you do it in-place with O(1) extra space?
  */
 public class RotateArray {
-	public static void main(String[] args) {
-
-	}
     public void rotate(int[] nums, int k) {
     	if(nums.length < 2)
     		return;

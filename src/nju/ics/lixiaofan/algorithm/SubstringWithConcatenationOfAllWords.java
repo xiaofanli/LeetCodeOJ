@@ -16,33 +16,8 @@ You should return the indices: [0,9].
 (order does not matter).
  */
 public class SubstringWithConcatenationOfAllWords {
-	public static void main(String[] args) {
-		SubstringWithConcatenationOfAllWords swcoaw = new SubstringWithConcatenationOfAllWords();
-		String[] words = { "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba", "ab", "ba",
-				"ab", "ba" };
-		System.out.println(swcoaw.findSubstring("abababab", words));
-	}
-	
-    public List<Integer> findSubstring(String s, String[] words) {
+    @SuppressWarnings("unchecked")
+	public List<Integer> findSubstring(String s, String[] words) {
         List<Integer> result = new LinkedList<Integer>();
         if (s == null || s.length() == 0 || words == null || words.length == 0) {
             return result;

@@ -12,11 +12,6 @@ Have you consider that the string might be empty? This is a good question to ask
 For the purpose of this problem, we define empty string as valid palindrome.
  */
 public class ValidPalindrome {
-	public static void main(String[] args) {
-		ValidPalindrome vp = new ValidPalindrome();
-		System.out.println(vp.isPalindrome("race a car"));
-	}
-	
     public boolean isPalindrome(String s) {
         if(s == null)
         	return false;

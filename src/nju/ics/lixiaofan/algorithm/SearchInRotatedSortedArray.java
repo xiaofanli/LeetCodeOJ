@@ -9,14 +9,6 @@ You are given a target value to search. If found in the array return its index, 
 You may assume no duplicate exists in the array.
  */
 public class SearchInRotatedSortedArray {
-
-	public static void main(String[] args) {
-		SearchInRotatedSortedArray s = new SearchInRotatedSortedArray();
-		int[] nums = {5,1,3};
-		long start = System.currentTimeMillis();
-		System.out.println(s.search(nums, 3));
-		System.out.println((System.currentTimeMillis() - start));
-	}
     public int search(int[] nums, int target) {
         if(nums.length == 0)
         	return -1;

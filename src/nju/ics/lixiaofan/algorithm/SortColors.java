@@ -15,13 +15,6 @@ First, iterate the array counting number of 0's, 1's, and 2's, then overwrite ar
 Could you come up with an one-pass algorithm using only constant space?
  */
 public class SortColors {
-	public static void main(String[] args) {
-		SortColors sc = new SortColors();
-		int[] nums = {0,2,2,2,0,2,1,1};
-		sc.sortColors(nums);
-		for(int n : nums)
-			System.out.print(n+" ");
-	}
     public void sortColors(int[] nums) {
     	if(nums.length < 2)
     		return;

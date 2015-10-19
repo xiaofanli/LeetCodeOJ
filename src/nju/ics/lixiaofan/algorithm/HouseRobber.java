@@ -9,11 +9,6 @@ Given a list of non-negative integers representing the amount of money of each h
 determine the maximum amount of money you can rob tonight without alerting the police.
  */
 public class HouseRobber {
-	public static void main(String[] args) {
-		int[] nums = {1,2};
-		System.out.println(rob(nums));
-	}
-    
 	//a classical DP solution: p: the solution to subarray [0..i-1], q: the solution to subarray [0..i-2]
     public static int rob(int[] nums) {
         int p = 0, q = 0;

@@ -20,19 +20,6 @@ word = "SEE", -> returns true,
 word = "ABCB", -> returns false.
 */
 public class WordSearch {
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		char[][] board = {
-				{'A','B','C','E'},
-				{'S','F','C','S'},
-				{'A','D','E','E'}
-		};
-		
-		
-		System.out.println(new WordSearch().exist(board,"ABCB"));
-	}
-
-	
 	public boolean exist(char[][] board, String word) {
 		if(word == null || word.equals(""))
 			return false;
@@ -75,7 +62,6 @@ public class WordSearch {
 	
 	class Char{
 		public Char(char c, int i, int j) {
-			// TODO Auto-generated constructor stub
 			this.c = c;
 			row = i;
 			col = j;

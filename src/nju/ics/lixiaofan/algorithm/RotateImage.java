@@ -8,16 +8,6 @@ Follow up:
 Could you do this in-place?
  */
 public class RotateImage {
-	public static void main(String[] args) {
-		RotateImage a = new RotateImage();
-		int[][] mat = {{1,2,3},{4,5,6},{7,8,9}};
-		a.rotate(mat);
-		for(int[] row : mat){
-			for(int n : row)
-				System.out.print(n+" ");
-			System.out.println();
-		}
-	}
 	//(i, j) -> (n-1-j, i)
     public void rotate(int[][] matrix) {
         int n = matrix.length, ub1 = (n-1)/2, ub2 = ub1 - n%2, tmp;

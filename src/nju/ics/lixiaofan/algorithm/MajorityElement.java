@@ -5,11 +5,6 @@ Given an array of size n, find the majority element. The majority element is the
 You may assume that the array is non-empty and the majority element always exist in the array.
  */
 public class MajorityElement {
-	public static void main(String[] args) {
-		int[] nums = {1,2,3,4,5,6,3,3,2,3,3,3,3};
-		MajorityElement me = new MajorityElement();
-		System.out.println(me.majorityElement(nums));
-	}
     public int majorityElement(int[] nums) {
         int k = nums.length/2+1;
         int[] cnt = new int[32];

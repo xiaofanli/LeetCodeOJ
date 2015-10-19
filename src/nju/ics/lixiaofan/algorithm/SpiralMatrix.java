@@ -1,6 +1,5 @@
 package nju.ics.lixiaofan.algorithm;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,22 +15,8 @@ import java.util.List;
 	 [ 7, 8, 9 ]
 	]
 	You should return [1,2,3,6,9,8,7,4,5].
-
 */
-
 public class SpiralMatrix {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int[][] a = {{1,2,3},{4,5,6},{7,8,9}};
-		List<Integer> list = spiralOrder(a);
-		for(int i : list)
-			System.out.println(i);
-	}
-	
 	public static List<Integer> spiralOrder(int[][] matrix) {
 		List<Integer> list = new LinkedList<Integer>();
 		if(matrix.length == 0)

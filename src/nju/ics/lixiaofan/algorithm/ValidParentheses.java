@@ -8,8 +8,6 @@ Given a string containing just the characters '(', ')', '{', '}', '[' and ']', d
 The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
  */
 public class ValidParentheses {
-	public static void main(String[] args) {
-	}
     public boolean isValid(String s) {
         if(s == null || s.length() == 0)
         	return true;

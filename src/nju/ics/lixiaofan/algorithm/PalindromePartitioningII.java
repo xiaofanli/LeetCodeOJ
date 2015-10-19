@@ -1,7 +1,5 @@
 package nju.ics.lixiaofan.algorithm;
 
-import java.util.Stack;
-
 /*
 Given a string s, partition s such that every substring of the partition is a palindrome.
 
@@ -11,12 +9,6 @@ For example, given s = "aab",
 Return 1 since the palindrome partitioning ["aa","b"] could be produced using 1 cut.
  */
 public class PalindromePartitioningII {
-
-	public static void main(String[] args) {
-		PalindromePartitioningII pp2 = new PalindromePartitioningII();
-		System.out.println(pp2.minCut("fifgbeajcacehiicccfecbfhhgfiiecdcjjffbghdidbhbdbfbfjccgbbdcjheccfbhafehieabbdfeigbiaggchaeghaijfbjhi"));
-	}
-	
 	//DP
 	public int minCut(String s) {
 		int[][] p = new int[s.length()][s.length()];

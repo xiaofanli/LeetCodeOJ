@@ -15,30 +15,6 @@ Could you solve it in-place? Remember that the board needs to be updated at the 
 In this question, we represent the board using a 2D array. In principle, the board is infinite, which would cause problems when the active area encroaches the border of the array. How would you address these problems?
  */
 public class GameOfLife {
-	public static void main(String[] args) {
-		GameOfLife a = new GameOfLife();
-		int[][] board = { 
-				{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-				{ 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 },
-				{ 0, 0, 1, 1, 0, 0, 0, 0, 0, 0 },
-				{ 0, 1, 1, 0, 0, 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
-		
-		for(int i = 0;i < 10;i++){
-			a.gameOfLife(board);
-			for(int[] row : board){
-				for(int n : row)
-					System.out.print((n == 1 ? "X " : "  "));
-				System.out.println();
-			}
-		}
-		
-	}
     public void gameOfLife(int[][] board) {
         int m = board.length, n = board[0].length, count;
     	for(int i = 0;i < m;i++)

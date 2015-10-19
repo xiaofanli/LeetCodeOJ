@@ -5,18 +5,6 @@ import java.util.List;
 import java.util.Stack;
 
 public class NQueens {
-	public static void main(String[] args) {
-		long start = System.currentTimeMillis();
-		NQueens nq = new NQueens();
-		List<String[]> result = nq.solveNQueens(8);
-		System.out.println("Time: "+(double)(System.currentTimeMillis()-start)/1000);
-		for(String[] board : result){
-			System.out.println("-------------------");
-			for(int i = 0;i < board.length;i++)
-				System.out.println(board[i]);
-		}
-	}
-	
 	public List<String[]> solveNQueens(int n) {
 		if(n == 0){
 			return null;

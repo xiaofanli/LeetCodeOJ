@@ -12,21 +12,6 @@ For example, given the following matrix:
 Return 4.
  */
 public class MaximalSquare {
-	public static void main(String[] args) {
-		MaximalSquare ms = new MaximalSquare();
-		char[][] matrix = 
-			  { { '0', '0', '0', '1', '0', '1', '0', },
-				{ '0', '1', '0', '0', '0', '0', '0', },
-				{ '0', '1', '0', '1', '0', '0', '1', },
-				{ '0', '0', '1', '1', '0', '0', '1', },
-				{ '1', '1', '1', '1', '1', '1', '0', },
-				{ '1', '0', '0', '1', '0', '1', '1', },
-				{ '0', '1', '0', '0', '1', '0', '1', },
-				{ '1', '1', '0', '1', '1', '1', '0', },
-				{ '1', '0', '1', '0', '1', '0', '1', },
-				{ '1', '1', '1', '0', '0', '0', '0' } };
-		System.out.println(ms.maximalSquare(matrix));
-	}
 	/*
 	A DP solution
 	It's actually to keep recording the max n*n window at each cell of the matrix.

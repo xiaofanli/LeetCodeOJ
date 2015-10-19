@@ -1,7 +1,6 @@
 package nju.ics.lixiaofan.algorithm;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
@@ -13,18 +12,14 @@ For example,
 [1,1,2], [1,2,1], and [2,1,1].
  */
 public class PermutationsII {
-	public static void main(String[] args) {
-
-	}
-	
 	public static List<List<Integer>> permuteUnique(int[] nums) {
 //	    Arrays.sort(nums);
 	    List<List<Integer>> res = new ArrayList<List<Integer>>();
 	    permute(nums,0,nums.length,res);
 	    return res;
 	}
-	public static void permute(int[] nums, int i, int j, List<List<Integer>> res){
-
+	
+	private static void permute(int[] nums, int i, int j, List<List<Integer>> res){
 	    if(i == j-1){
 	        ArrayList<Integer> list = new ArrayList<Integer>();
 	        for(int x:nums) list.add(x);
@@ -42,7 +37,8 @@ public class PermutationsII {
 
 	    }
 	}
-	public static void swap(int[] nums, int i,int j){
+	
+	private static void swap(int[] nums, int i,int j){
 	    int tmp = nums[j];
 	    nums[j] = nums[i];
 	    nums[i] = tmp;

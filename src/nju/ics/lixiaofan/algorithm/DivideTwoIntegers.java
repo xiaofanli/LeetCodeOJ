@@ -9,10 +9,6 @@ Divide two integers without using multiplication, division and mod operator.
 If it is overflow, return MAX_INT.
  */
 public class DivideTwoIntegers {
-	public static void main(String[] args) {
-		DivideTwoIntegers dti = new DivideTwoIntegers();
-		System.out.println(dti.divide(Integer.MIN_VALUE, -2));
-	}
     public int divide(int dividend, int divisor) {
         if(divisor == 0)
         	return Integer.MAX_VALUE;

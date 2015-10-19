@@ -15,11 +15,6 @@ Given encoded message "12", it could be decoded as "AB" (1 2) or "L" (12).
 The number of ways decoding "12" is 2.
  */
 public class DecodeWays {
-	public static void main(String[] args) {
-		DecodeWays dw = new DecodeWays();
-		System.out.println(dw.numDecodings("9371597631128776948387197132267188677349946742344217846154932859125134924241649584251978418763151253"));
-	}
-	
 	int[] n;
     public int numDecodings(String s) {
     	if(s.length() == 0 || s.startsWith("0"))

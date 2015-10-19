@@ -3,28 +3,6 @@ package nju.ics.lixiaofan.algorithm;
 import nju.ics.lixiaofan.structure.ListNode;
 
 public class AddTwoNumbers {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ListNode ph = new ListNode(2), p = ph;
-		p.next = new ListNode(4);
-		p = p.next;
-		p.next = new ListNode(3);
-		
-		ListNode qh = new ListNode(5), q = qh;
-		q.next = new ListNode(6);
-		q = q.next;
-		q.next = new ListNode(4);
-		
-		ListNode r = addTwoNumbers(ph, qh);
-		for(ListNode a = r;a != null; a = a.next)
-			System.out.println(a.val);
-	}
-
-
 	public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		int sum,  c = 0;
 		ListNode p = l1, q = l2, head = new ListNode(-1), ret = head;
@@ -79,5 +57,4 @@ public class AddTwoNumbers {
 		}
 		return head.next;
 	}
-	
 }

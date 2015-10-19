@@ -11,10 +11,6 @@ A linked list is given such that each node contains an additional random pointer
 Return a deep copy of the list.
  */
 public class CopyListWithRandomPointer {
-	public static void main(String[] args) {
-
-	}
-	
     public RandomListNode copyRandomList(RandomListNode head) {
         if(head == null)
         	return null;

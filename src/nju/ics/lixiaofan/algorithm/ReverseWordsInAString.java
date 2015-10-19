@@ -20,12 +20,6 @@ How about multiple spaces between two words?
 Reduce them to a single space in the reversed string.
  */
 public class ReverseWordsInAString {
-	public static void main(String[] args) {
-		String s = "  the sky    is   blue  ";
-		ReverseWordsInAString a = new ReverseWordsInAString();
-		System.out.println(a.reverseWords(s));
-	}
-	
     public String reverseWords(String s) {
         if(s == null)
         	return null;

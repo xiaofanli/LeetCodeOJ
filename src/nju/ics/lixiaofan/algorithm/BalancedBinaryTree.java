@@ -12,27 +12,11 @@ For this problem, a height-balanced binary tree is defined as a binary tree
 in which the depth of the two subtrees of every node never differ by more than 1.
  */
 public class BalancedBinaryTree {
-	public static void main(String[] args) {
-		TreeNode root = new TreeNode(1);
-		root.left = new TreeNode(2);
-		root.right = new TreeNode(3);
-		root.left.left = new TreeNode(4);
-		root.left.right = new TreeNode(5);
-		root.right.right = new TreeNode(6);
-		root.left.left.left = new TreeNode(7);
-		
-		BalancedBinaryTree bbt = new BalancedBinaryTree();
-		System.out.println(bbt.isBalanced(root));
-	}
-	
 	boolean balanced = true;
 
 	public boolean isBalanced(TreeNode root) {
-		// getDepth(root);
-		// return balanced;
-		if (root == null) {
+		if (root == null)
 			return true;
-		}
 		Queue<TreeNode> Que = new LinkedList<TreeNode>();
 		Que.add(root);
 		boolean flag = false, flag2 = false;
@@ -61,7 +45,6 @@ public class BalancedBinaryTree {
 			}
 
 		}
-
 		return true;
 	}
 }

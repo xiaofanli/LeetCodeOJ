@@ -11,9 +11,6 @@ top() -- Get the top element.
 getMin() -- Retrieve the minimum element in the stack.
  */
 public class MinStack {
-	public static void main(String[] args) {
-
-	}
 	int[] data = new int[32];
 	int count = 0, min = Integer.MAX_VALUE;
     public void push(int x) {

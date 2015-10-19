@@ -8,12 +8,6 @@ b = "1"
 Return "100".
  */
 public class AddBinary {
-	public static void main(String[] args) {
-		String a = "111", b = "1001";
-		AddBinary ab = new AddBinary();
-		System.out.println(ab.addBinary(a, b));
-	}
-
     public String addBinary(String a, String b) {
         char[] m = a.toCharArray();
         char[] n = b.toCharArray();

@@ -13,16 +13,6 @@ Given [1,3],[2,6],[8,10],[15,18],
 return [1,6],[8,10],[15,18].
  */
 public class MergeIntervals {
-	public static void main(String[] args) {
-		List<Interval> list = new LinkedList<Interval>();
-		list.add(new Interval(1, 4));
-		list.add(new Interval(0, 2));
-		list.add(new Interval(3, 5));
-		MergeIntervals mi = new MergeIntervals();
-		List<Interval> merged = mi.merge(list);
-		for(Interval i : merged)
-			System.out.println("["+i.start+","+i.end+"]");
-	}
 	public List<Interval> merge(List<Interval> intervals) {
 		if(intervals.isEmpty())
 			return new LinkedList<Interval>();

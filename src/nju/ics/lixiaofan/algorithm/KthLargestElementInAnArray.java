@@ -13,10 +13,6 @@ Note:
 You may assume k is always valid, 1 ¡Ü k ¡Ü array's length.
  */
 public class KthLargestElementInAnArray {
-	public static void main(String[] args) {
-		int[] nums = {3,2,1,5,6,4};
-		System.out.println(new KthLargestElementInAnArray().findKthLargest(nums, 2));
-	}
     public int findKthLargest(int[] nums, int k) {
         List<Integer> list = new LinkedList<Integer>();
         for(int n : nums){

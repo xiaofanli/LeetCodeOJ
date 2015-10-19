@@ -14,15 +14,6 @@ package nju.ics.lixiaofan.algorithm;
  */
 
 public class MaximumSubarray {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(true ^ false);
-	}
-	 
 	public int maxSubArray(int[] A) {
 		int max = Integer.MIN_VALUE, sum = 0;
 	    for (int i = 0; i < A.length; i++) {

@@ -21,13 +21,6 @@ If n = 4 and k = 2, a solution is:
 ]
  */
 public class Combinations {
-	public static void main(String[] args) {
-		Combinations cb = new Combinations();
-		List<List<Integer>> result = cb.combine(44, 2);
-		for(List<Integer> list : result)
-			System.out.println(list);
-	}
-	
     public List<List<Integer>> combine(int n, int k) {
     	List<List<Integer>> result = new LinkedList<List<Integer>>();
     	if(k < 1 || k > n)

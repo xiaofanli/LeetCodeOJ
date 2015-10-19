@@ -13,11 +13,6 @@ For example, given citations = [3, 0, 6, 1, 5], which means the researcher has 5
 Note: If there are several possible values for h, the maximum one is taken as the h-index.
  */
 public class HIndex {
-	public static void main(String[] args) {
-		HIndex hi = new HIndex();
-		int[] citations = {4, 0, 6, 4, 5};
-		System.out.println(hi.hIndex(citations));
-	}
     public int hIndex(int[] citations) {
     	if(citations.length == 0)
     		return 0;

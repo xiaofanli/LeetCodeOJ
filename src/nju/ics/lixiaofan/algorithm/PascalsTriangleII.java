@@ -1,7 +1,6 @@
 package nju.ics.lixiaofan.algorithm;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 /*
@@ -15,15 +14,6 @@ Could you optimize your algorithm to use only O(k) extra space?
  */
 
 public class PascalsTriangleII {
-
-	public static void main(String[] args) {
-		PascalsTriangleII p = new PascalsTriangleII();
-		List<Integer> list = p.getRow(40);
-		for(Integer i : list){
-			System.out.println(i);
-		}
-	}
-
 	public List<Integer> getRow(int rowIndex) {
 		if(rowIndex < 0)
 			return null;

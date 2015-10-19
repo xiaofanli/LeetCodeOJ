@@ -12,15 +12,6 @@ import java.util.Set;
 	For "bbbbb" the longest substring is "b", with the length of 1.
 */
 public class LongestSubstringWithoutRepeatingCharacters {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Set<Integer> chs = new HashSet<Integer>();
-		int a = 's', b = 's';
-		chs.add(a);
-		System.out.println(chs.contains(b));
-	}
-	
 	public int lengthOfLongestSubstring(String s) {
 		if(s == null || s.equals(""))
 			return 0;
