@@ -13,21 +13,21 @@ public class MergeTwoSortedLists {
             return l1;
         
         ListNode head = l1.val <= l2.val ? l1 : l2;
-        ListNode p1 = l1, p2 = l2, q1 = p1, q2 = p2;
-        while(q1 != null && q2 != null){
-            if(q1.val <= q2.val){
-                while(q1 != null && q1.val <= q2.val){
-                    p1 = q1;
-                    q1 = q1.next;
-                }
-                p1.next = q2;
+        ListNode p1 = l1, p2 = l2, tmp;
+        while(p1 != null && p2 != null){
+            if(p1.val <= p2.val){
+                while(p1.next != null && p1.next.val <= p2.val)
+                    p1 = p1.next;
+                tmp = p1.next;
+                p1.next = p2;
+                p1 = tmp;
             }
             else{
-                while(q2 != null && q1.val > q2.val){
-                    p2 = q2;
-                    q2 = q2.next;
-                }
-                p2.next = q1;
+                while(p2.next != null && p1.val > p2.next.val)
+                    p2 = p2.next;
+                tmp = p2.next;
+                p2.next = p1;
+                p2 = tmp;
             }
         }
         return head;
