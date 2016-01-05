@@ -10,108 +10,34 @@ You may assume no duplicate exists in the array.
  */
 public class SearchInRotatedSortedArray {
     public int search(int[] nums, int target) {
-        if(nums.length == 0)
-        	return -1;
-        if(nums.length == 1)
-        	return  nums[0] == target ? 0 : -1;
-        if(nums.length == 2)
-        	return  nums[0] == target ? 0 : (nums[1] == target ? 1 : -1);
-        
-        int l = 0, r = nums.length-1;
-        if(nums[l] > nums[r]){
-        	int rvalue = nums[nums.length-1];
-        	//descending
-        	if(nums[1] < nums[0] && nums[1] > rvalue){
-        		int mid;
-        		while(true){
-        			mid = (l+r)/2;
-	        		if(nums[mid] == target)
-	        			return mid;
-	        		else if(l >= r)
-	        			return -1;
-	        		else if(nums[mid] < target)
-	        			r = mid - 1;
-	        		else
-	        			l = mid + 1;
-        		}
-        	}
-        	if(target >= nums[l]){
-        		int mid;
-        		while(true){
-	        		mid = (l+r)/2;
-	        		if(nums[mid] == target)
-	        			return mid;
-	        		else if(l >= r)
-	        			return -1;
-	        		else if(nums[mid] > target || nums[mid] <= rvalue)
-	        			r = mid - 1;
-	        		else
-	        			l = mid + 1;
-        		}	
-        	}
-        	else if(target <= nums[r]){
-        		int mid;
-        		while(true){
-	        		mid = (l+r)/2;
-	        		if(nums[mid] == target)
-	        			return mid;
-	        		else if(l >= r)
-	        			return -1;
-	        		else if(nums[mid] > target && nums[mid] <= rvalue)
-	        			r = mid - 1;
-	        		else
-	        			l = mid + 1;
-        		}	
-        	}
-        	else
-        		return -1;
+        int len = nums.length, len1 = len-1;
+        int l = 0, r = len1, mid, offset = 0;
+        //find the pivot first if exist
+        if(nums[0] > nums[len1]){
+            int last = nums[len1];
+            while(l < r){
+                mid = (l + r) / 2;
+                if(nums[mid] > last)
+                    l = mid + 1;
+                else
+                    r = mid;
+            }
+            offset = l;
+            l = 0;
+            r = len1;
         }
-        else{
-        	//ascending
-        	if(nums[1] > nums[0] && nums[1] < nums[nums.length-1]){
-        		int mid;
-        		while(true){
-        			mid = (l+r)/2;
-	        		if(nums[mid] == target)
-	        			return mid;
-	        		else if(l >= r)
-	        			return -1;
-	        		else if(nums[mid] > target)
-	        			r = mid - 1;
-	        		else
-	        			l = mid + 1;
-        		}
-        	}
-        	if(target >= nums[r]){
-        		int mid;
-        		while(true){
-	        		mid = (l+r)/2;
-	        		if(nums[mid] == target)
-	        			return mid;
-	        		else if(l >= r)
-	        			return -1;
-	        		else if(nums[mid] > target || nums[mid] <= nums[0])
-	        			l = mid - 1;
-	        		else
-	        			r = mid + 1;
-        		}	
-        	}
-        	else if(target <= nums[l]){
-        		int mid;
-        		while(true){
-	        		mid = (l+r)/2;
-	        		if(nums[mid] == target)
-	        			return mid;
-	        		else if(l >= r)
-	        			return -1;
-	        		else if(nums[mid] > target && nums[mid] <= nums[0])
-	        			l = mid - 1;
-	        		else
-	        			r = mid + 1;
-        		}	
-        	}
-        	else
-        		return -1;
+        int mid2;
+        while(l < r){
+            mid2 = (l + r) / 2;
+            mid = (mid2 + offset) % len;
+            if(nums[mid] == target)
+                return mid;
+            else if(nums[mid] > target)
+                r = mid2 - 1;
+            else
+                l = mid2 + 1;
         }
+        mid = (l + offset) % len;
+        return nums[mid] == target ? mid : -1;
     }
 }
